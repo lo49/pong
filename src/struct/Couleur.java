@@ -52,21 +52,21 @@ public class Couleur
   }
   public void setRouge(int r)
   {
-    if (r<0 && r>255)
+    if (r>0 && r<255)
       {this.rouge=r;}
     else 
       {System.out.println("error : rouge doit etre compris entre 0 et 255");}
   }
   public void setVert(int v)
   {
-    if (v<0 && v>255)
+    if (v>0 && v<255)
       {this.vert=v;}
     else 
       {System.out.println("error : vert doit etre compris entre 0 et 255");}
   }
   public void setBleu(int b)
   {
-    if (b<0 && b>255)
+    if (b>0 && b<255)
       {this.bleu=b;}
     else 
       {System.out.println("error : bleu doit etre compris entre 0 et 255");}

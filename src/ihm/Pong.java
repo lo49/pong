@@ -33,7 +33,7 @@ public class Pong {
       this.nb_mur_centre = nb_mur_centre;
       
       init();
-    
+    	window.repaint();
     }
     /** Fonction gérant l'initialisation du jeu
       
@@ -44,28 +44,44 @@ public class Pong {
 	// Calcul du nombre de Mur à la vertical.
 	// 20 -> hauteur du mur
 	// 10 -> largeur du mur
-	nb_mur_verticale = heigth_window/20;
-	nb_mur_horizontale = (width_window-2*10)/20;
+	// nb_mur_verticale = heigth_window/20;
+	// nb_mur_horizontale = (width_window-2*10)/20;
 	Couleur col1 = new Couleur(2,155,5);
 	int coordonne_x = 0;
 	int coordonne_y = 0;
 	// Mur vertical
-	for(int i =0;i<nb_mur_verticale;i++){
-	  //System.out.println("x = 0; y= "+i*20);
-	  coordonne_x = 0;
-	  coordonne_y = i*20;
-	  Mur r1= new Mur(coordonne_x,i*20,col1,10,20,1.,1.);
-	  //Mur(int x,int y,Couleur color, int h, int l, double orientation, double coef)
-	  
-	  //Mur r1=new Mur(5,i*20,10,20,col1);
-	  window.addMur(r1);
-	  coordonne_x = width_window - 20;
-	  Mur r2=new Mur(coordonne_x,coordonne_y,col1,10,20,1.,1.);
-	  window.addMur(r2);
-	}
+	// for(int i =0;i<nb_mur_verticale;i++){
+	//   //System.out.println("x = 0; y= "+i*20);
+	//   coordonne_x = 0;
+	//   coordonne_y = i*20;
+	//   Mur m1= new Mur(coordonne_x,i*20,col1,20,10,1.,1.);
+	    
+	//   //Mur m1=new Mur(5,i*20,10,20,col1);
+	//   this.addMur(m1);
+	//   coordonne_x = width_window - 20;
+	//   Mur m2=new Mur(coordonne_x,coordonne_y,col1,20,10,1.,1.);
+	//   this.addMur(m2);
+
+	// }
 	
+			Mur ml = new Mur(0,0,col1,heigth_window,20,1.,1.);
+			this.addMur(ml);
 	
+			Mur mr = new Mur(width_window-40,0,col1,heigth_window,20,1.,1.);
+			this.addMur(mr);
+		
+			Mur mh = new Mur(0,20,col1,20,width_window-40,1.,1.);
+			this.addMur(mh);
+			
+			Mur mb = new Mur(0,heigth_window-20,col1,20,width_window,1.,1.);
+			this.addMur(mb);
+		
+		
+
+
 	
+	window.addMur(mur);
+	window.repaint();
     }
     public void execute(){
       

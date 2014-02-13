@@ -1,6 +1,8 @@
 package struct;
 import java.awt.Graphics;
+
 import struct.*;
+import ihm.*;
 
 public class Mur extends Forme {
 
@@ -12,7 +14,7 @@ public class Mur extends Forme {
 		this.coefficient=coef;
 	}
 
-
+	
 	public void dessine(Graphics g) {
 		g.setColor(new java.awt.Color(couleur.getRouge(), couleur.getVert(), couleur.getBleu()));
 		g.fillRect(X, Y, largeur, hauteur);

@@ -110,10 +110,11 @@ public class Window extends JFrame implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {	
+		//System.out.println(e);
 	}
 
-	public void addMur(Mur r) {
-		mur.addElement(r);
+	public void addMur(Vector<Mur> r) {
+		mur = r;
 	}
 
 
