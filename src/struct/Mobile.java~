@@ -1,0 +1,9 @@
+package struct;
+
+public class Mobile{
+  public vitesse;
+  
+  public void deplace(){}
+  public void dessine(){}
+
+}
