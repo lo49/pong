@@ -30,7 +30,8 @@ doc:
 
 clean:
 	rm -f $(CLASS_PATH)*/*.class 
+	rm -f $(SOURCE_PATH)*/*.java~
 	rm -rf $(DOC_PATH)*
-	rmdir $(DOC_PATH)
+	#rmdir $(DOC_PATH)
 
 	
