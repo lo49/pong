@@ -9,7 +9,7 @@ public abstract class Shape {
     x += dx;
     y += dy;
   }
-  public abstract void draw(Graphics g);
+  public abstract void dessine(Graphics g);
   public Shape(int x,int y,Color c){
 	    color = c;
 	    this.x=x;

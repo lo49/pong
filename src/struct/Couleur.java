@@ -9,7 +9,7 @@ public class Couleur
   
  
   // CONSTRUCTEUR
-  Couleur(int r, int v, int b, Forme f)
+  public Couleur(int r, int v, int b, Forme f)
   {
     setRouge(r);
     setVert(v);
@@ -17,6 +17,14 @@ public class Couleur
     setForme(f);    
   }
   
+  // CONSTRUCTEUR
+  public Couleur(int r, int v, int b)
+  {
+    setRouge(r);
+    setVert(v);
+    setBleu(b);
+   }
+
   // ACCESSEURS PUBLICS
   public int getRouge()
   {

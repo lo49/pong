@@ -29,7 +29,7 @@ public class Circle extends Shape{
     y += 2*dy;
   }
 	
-	public void draw(Graphics g) {
+	public void dessine(Graphics g) {
 		// la ligne suivante marchera seulement si la relation entre Rectangle et Color est bien faite
 		g.setColor(new java.awt.Color(color.getRed(), color.getGreen(), color.getBlue()));
 		g.fillOval(x, y, rayon, rayon);

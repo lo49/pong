@@ -46,7 +46,7 @@ public class Pong {
 	// 10 -> largeur du mur
 	nb_mur_verticale = heigth_window/20;
 	nb_mur_horizontale = (width_window-2*10)/20;
-	Color col1 = new Color(2,155,5);
+	Couleur col1 = new Couleur(2,155,5);
 	int coordonne_x = 0;
 	int coordonne_y = 0;
 	// Mur vertical
@@ -54,12 +54,14 @@ public class Pong {
 	  //System.out.println("x = 0; y= "+i*20);
 	  coordonne_x = 0;
 	  coordonne_y = i*20;
-	  Rectangle r1=new Rectangle(coordonne_x,i*20,10,20,col1);
+	  Mur r1= new Mur(coordonne_x,i*20,col1,10,20,1.,1.);
+	  //Mur(int x,int y,Couleur color, int h, int l, double orientation, double coef)
+	  
 	  //Mur r1=new Mur(5,i*20,10,20,col1);
-	  window.addRectangle(r1);
+	  window.addMur(r1);
 	  coordonne_x = width_window - 20;
-	  Rectangle r2=new Rectangle(coordonne_x,coordonne_y,10,20,col1);
-	  window.addRectangle(r2);
+	  Mur r2=new Mur(coordonne_x,coordonne_y,col1,10,20,1.,1.);
+	  window.addMur(r2);
 	}
 	
 	

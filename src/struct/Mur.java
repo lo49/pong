@@ -2,13 +2,13 @@ package struct;
 import java.awt.Graphics;
 import struct.*;
 
-public abstract class Mur extends Forme {
+public class Mur extends Forme {
 
 	private double coefficient;
 
 	public Mur(int x,int y,Couleur color, int h, int l, double orientation, double coef){
 		super(x,y,color,h,l,orientation);
-		
+		//Forme(int x, int y, int h, int l, double o, int r, int v, int b) 		
 		this.coefficient=coef;
 	}
 

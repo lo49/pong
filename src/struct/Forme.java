@@ -1,21 +1,24 @@
 package struct;
+import java.awt.Graphics;
+
 import struct.*;
 import ihm.*;
 
 public abstract class Forme
 {
   // ATTRIBUTS PRIVES
-  private int X;
-  private int Y;
-  private int hauteur;
-  private int largeur;
-  private double orientation;
-  private Couleur couleur;
-  private Pong p;
+  protected int X;
+  protected int Y;
+  protected int hauteur;
+  protected int largeur;
+  protected double orientation;
+  protected Couleur couleur;
+  protected Pong p;
   
   // CONSTRUCTEUR PUBLIC
-  public Forme(int x, int y, int h, int l, double o) // constructeur sans couleur (r,v,b)
-  {
+  // constructeur sans couleur (r,v,b)
+  public Forme(int x, int y, int h, int l, double o) 
+    {
   
     setX(x);
     setY(y);
@@ -24,27 +27,27 @@ public abstract class Forme
     setOrientation(o);
   }
 
-
-   public Forme(int x, int y, int h, int l, double o, int r, int v, int b) // constr. avec couleur
+  // constr. avec couleur
    //Forme(int,int,Couleur,int,int,double)
+   public Forme(int x, int y,Couleur color, int h, int l, double o) 
   {
     setX(x);
     setY(y);
     setHauteur(h);
     setLargeur(l);
     setOrientation(o);
-    addCouleur(r,v,b);
+    addCouleur(color);
   }
   
 
   // METHODES PUBLIC
-  public void addCouleur(int r, int v, int b) // ajouter une couleur à la forme
+  // ajouter une couleur à la forme
+  public void addCouleur(Couleur c)
   {
-    Couleur c = new Couleur(r,v,b,this);
     this.couleur=c;
   }
   
-  public abstract void dessine();
+  abstract void dessine(Graphics g);
    
   
   // MUTATEURS PUBLIC

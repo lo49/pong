@@ -20,10 +20,10 @@ public class Window extends JFrame implements KeyListener {
 	/*try{
 	private Vector <Triangle> tris=new Vector <Triangle>();
 	}catch{*/
-	private Vector <Rectangle> rects=new Vector <Rectangle>();
+	private Vector <Mur> mur=new Vector <Mur>();
 	//}
 	private Vector <Circle> circs=new Vector <Circle>();
-	//TODO : implémenter la relation entre Window et Rectangle (puis entre Window et Circle)
+	//TODO : implémenter la relation entre Window et Mur (puis entre Window et Circle)
 
 	public Window(String name, int width, int height) {
 		
@@ -50,9 +50,9 @@ public class Window extends JFrame implements KeyListener {
 	 * */
 	public void moveAll(int dx, int dy) {
 		//TODO: déplacer les éléments graphiques de la Window
-		for(int i=0;i<rects.size();i++)
+		for(int i=0;i<mur.size();i++)
 		{
-			rects.elementAt(i).move(dx,dy);
+			//mur.elementAt(i).move(dx,dy);
 		}
 		for(int i=0;i<circs.size();i++)
 		{
@@ -66,14 +66,14 @@ public class Window extends JFrame implements KeyListener {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-		//TODO: appeler la draw des éléments graphiques de la Window
-		for(int i=0;i<rects.size();i++)
+		//TODO: appeler la dessine des éléments graphiques de la Window
+		for(int i=0;i<mur.size();i++)
 		{
-			rects.elementAt(i).draw(g);
+			mur.elementAt(i).dessine(g);
 		}
 		for(int i=0;i<circs.size();i++)
 		{
-			circs.elementAt(i).draw(g);
+			circs.elementAt(i).dessine(g);
 		}
 	}
 	
@@ -112,8 +112,8 @@ public class Window extends JFrame implements KeyListener {
 	public void keyReleased(KeyEvent e) {	
 	}
 
-	public void addRectangle(Rectangle r) {
-		rects.addElement(r);
+	public void addMur(Mur r) {
+		mur.addElement(r);
 	}
 
 

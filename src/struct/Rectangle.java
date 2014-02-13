@@ -28,7 +28,7 @@ public class Rectangle extends Shape {
 // 	  y+=dy;
 // 	}
 // 	
-	public void draw(Graphics g) {
+	public void dessine(Graphics g) {
 		// la ligne suivante marchera seulement si la relation entre Rectangle et Color est bien faite
 		g.setColor(new java.awt.Color(color.getRed(), color.getGreen(), color.getBlue()));
 		g.fillRect(x, y, width, height);
